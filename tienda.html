@@ -1,17 +1,22 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mi Tienda Web - 2000</title><style>body{background:#000;color:gold;font-family:Arial;text-align:center;margin:0;padding:6px}.grid{display:flex;flex-wrap:wrap;justify-content:center}.card{width:23%;margin:2px;background:#111;border:1px solid #333;border-radius:7px;padding:3px;box-sizing:border-box}.precio{background:#fff;color:#000;padding:3px 5px;border-radius:12px;font-size:8px;font-weight:bold;display:inline-block}.desc{background:red;color:#fff;padding:2px 5px;border-radius:10px;font-size:7px;margin-left:2px;display:inline-block}img{width:100%;height:65px;border-radius:5px;border:1px solid gold}</style></head><body>
-<h1>Mi Tienda Web - 2,000 visibles 100%</h1><div class="grid" id="g"></div><br><a href="index.html" style="color:gold;border:1px solid gold;padding:10px 20px;border-radius:20px;text-decoration:none"><< Volver a Index</a>
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mi Tienda Web - 2,000 visibles</title><style>body{background:#000;color:gold;font-family:Arial;text-align:center;margin:0;padding:6px}.grid{display:flex;flex-wrap:wrap;justify-content:center}.card{width:23%;margin:3px;background:#111;border:1px solid gold;border-radius:10px;padding:5px;box-sizing:border-box}.foto{width:100%;height:70px;background:#222;border-radius:8px;border:1px solid #333;display:flex;align-items:center;justify-content:center;font-size:40px}.precio{background:#fff;color:#000;padding:3px 6px;border-radius:12px;font-size:9px;font-weight:bold;display:inline-block}.desc{background:red;color:#fff;padding:2px 6px;border-radius:10px;font-size:8px;margin-left:3px;display:inline-block}</style></head><body>
+<h1>Mi Tienda Web - 2,000 visibles 100%</h1>
+<p style="color:#fff">Reloj, Yogurt, Leche, Zapato, Pantalón, 100% visibles</p>
+<div class="grid" id="g"></div>
+<br><a href="index.html" style="color:gold;border:1px solid gold;padding:10px 20px;border-radius:20px;text-decoration:none"><< Volver a Index</a>
 <script>
-let productos=["microondas","telefono","tablet","computadora","refresco","yogurt","leche","cereal","pan-bimbo","queso","fabuloso","pinol","libreta","lapiz","libro"];
-let g=document.getElementById('g'); let h="";
+let lista=[
+{nom:"reloj",ico:"⌚"},{nom:"yogurt",ico:"🍶"},{nom:"leche",ico:"🥛"},{nom:"zapato",ico:"👟"},{nom:"pantalon",ico:"👖"},
+{nom:"telefono",ico:"📱"},{nom:"tablet",ico:"📲"},{nom:"computadora",ico:"💻"},{nom:"refresco",ico:"🥤"},{nom:"cereal",ico:"🥣"},
+{nom:"pan-bimbo",ico:"🍞"},{nom:"queso",ico:"🧀"},{nom:"libreta",ico:"📒"},{nom:"lapiz",ico:"✏️"},{nom:"libro",ico:"📚"},
+{nom:"microondas",ico:"📺"},{nom:"fabuloso",ico:"🧴"},{nom:"pinol",ico:"🧹"}
+];
+let g=document.getElementById('g'); let html="";
 for(let i=1;i<=2000;i++){
-let nombre=productos[i%productos.length];
-let color=Math.floor(Math.random()*16777215).toString(16).padStart(6,'0');
-let svg=`<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><rect width='200' height='200' fill='#${color}'/><text x='100' y='90' text-anchor='middle' fill='white' font-size='12'>${nombre}</text><text x='100' y='120' text-anchor='middle' fill='white' font-size='18' font-weight='bold'>${i}</text></svg>`;
-let base=btoa(svg);
-let precio=(15+i*0.25).toFixed(2);
-let desc=Math.floor(Math.random()*50+5);
-h+=`<div class="card"><img loading="lazy" src="data:image/svg+xml;base64,${base}"><br><small style="font-size:7px;color:#fff">${nombre}</small><br><span class="precio">s/ ${precio}</span><span class="desc">-${desc}%</span></div>`;
+let p=lista[i%lista.length];
+let precio=(20+i*0.35).toFixed(2);
+let d=Math.floor(Math.random()*50+5);
+html+=`<div class="card"><div class="foto">${p.ico}</div><small style="color:#fff;font-size:9px">${p.nom} ${i}</small><br><span class="precio">s/ ${precio}</span><span class="desc">-${d}%</span></div>`;
 }
-g.innerHTML=h;
+g.innerHTML=html;
 </script>
 </body></html>
