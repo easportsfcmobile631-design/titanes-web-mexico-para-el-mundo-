@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>titanes-mi-tienda-web-mexico-para-el-mundo</title>
+<style>
+body{background:#000;color:#FFD700;font-family:Arial;text-align:center;margin:0;padding:12px}
+.caja{border:1.5px solid gold;border-radius:12px;padding:15px;margin:14px 0}
+.btn-blanco{background:#fff;color:#000;padding:16px 32px;border-radius:30px;text-decoration:none;font-weight:bold;font-size:18px;display:inline-block;margin:10px}
+.publi{width:96%;height:380px;background:linear-gradient(90deg,gold,#fff,gold);border:4px solid gold;border-radius:15px;display:flex;align-items:center;justify-content:center;margin:12px auto;color:#000;font-weight:bold;font-size:22px;line-height:1.4}
+.grid{display:flex;flex-wrap:wrap;justify-content:center}
+.app{background:#fff;color:#000;padding:6px 9px;border-radius:18px;margin:3px;font-size:10px;font-weight:bold;text-decoration:none;display:inline-block}
+</style>
+</head>
+<body>
+<h1>titanes-mi-tienda-web-mexico-para-el-mundo</h1>
 
+<div class="caja">
+<h2>Descripción</h2>
+<p style="color:#fff">Jesús Eduardo Martínez Carrillo<br>Fundador de la Marca Titanes Poder de un Guerrero</p>
+<h3>Misión</h3><p style="color:#fff">Llevar productos útiles a familias de México y el mundo.</p>
+<h3>Visión</h3><p style="color:#fff">Ser la tienda web líder mundial.</p>
+<h3>Valores</h3><p style="color:#fff">Honestidad, respeto, compromiso y poder de guerrero.</p>
+<h3>Objetivos</h3><p style="color:#fff">10,000 productos visibles 100% y 70 aplicaciones funcionando.</p>
+<a href="#mas" style="color:gold">Ver Más</a><br><br>
+<a href="tienda.html" class="btn-blanco">Mi Tienda Web</a>
+</div>
+
+<div class="caja">
+<h2>Diseño de publicidad de productos 100% visible</h2>
+<div class="publi">PUBLICIDAD TITANES 100% VISIBLE<br>95 PRODUCTOS EN UNA SOLA IMAGEN<br>microondas teléfono tablet computadoras refrescos yogurt leche cereal<br>PODER DE UN GUERRERO<br>MEXICO PARA EL MUNDO</div>
+</div>
+
+<div id="mas" class="caja">
+<h2>Las redes sociales en index - 70 Aplicaciones Web</h2>
+<div class="grid" id="apps"></div>
+<script>
+let cont=document.getElementById('apps');
+let nombres=["facebook","instagram","tiktok","whatsapp","youtube","x-twitter","telegram","pinterest","paypal","mercado-pago","amazon","mercado-libre","gmail","google-maps","drive","meet","zoom","netflix","spotify","uber","didi","rappi","shein","shopee","temu","linkedin","snapchat","threads","twitch","discord","reddit","canva","capcut","chatgpt","gemini","copilot","sheets","docs","outlook","yahoo","aliexpress","walmart","oxxo","bbva","santander","azteca","coppel","elektra","coca-cola","bimbo","lala","sabritas","gamesa","barcel","pepsi","fanta","sprite","corona","modelo","tecate","telcel","movistar","at&t","izzi","totalplay","telmex","cfe","sat","imss","uber-eats","kfc"];
+for(let i=0;i<70;i++){cont.innerHTML+=`<a class="app" href="https://www.google.com/search?q=${nombres[i]}" target="_blank">${nombres[i]}</a>`}
+</script>
+</div>
+
+<div class="caja">
+<h2>Historia</h2><p style="color:#fff">Nace en Ecatepec de Morelos, Estado de México.</p>
+<h3>Contacto</h3><p style="color:#fff">Contacto: 55-1234-5678<br>E-mail: titanes.guerrero.mexico@gmail.com<br>Ubicación: Ecatepec de Morelos, Estado de México, México<br>Sugerencias comentarios: Buzón web y WhatsApp<br>Régimen Fiscal: Persona Física con Actividad Empresarial</p>
+</div>
+
+</body>
+</html>
