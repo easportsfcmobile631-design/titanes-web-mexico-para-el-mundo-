@@ -1,2 +1,1 @@
-# titanes-web-mexico-para-el-mundo-
-Tienda web mexicana Titanes Poder de un Guerrero - 95 categorias - Mision Vision Valores - Jesus Eduardo Martinez Carrillo - Mexico para el mundo
+Soy *Jesús Eduardo Martínez Carrillo*, Fundador de la Marca *Titanes Poder de un Guerrero*. *titanes-mi-tienda-web-mexico-para-el-mundo* nace en Lerdo, Durango, con la *Misión* de llevar productos útiles, accesibles y de calidad a todas las familias de México y el mundo. *Visión:* Ser la tienda web líder reconocida a nivel mundial por su poder, confianza y variedad. *Valores:* Honestidad, Respeto, Compromiso y Poder Guerrero. *Objetivos:* Mostrar 10,000 productos visibles al 100% con su precio y descuento, 70 aplicaciones web funcionando, y un diseño de publicidad 100% visible.
