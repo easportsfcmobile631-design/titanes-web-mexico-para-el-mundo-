@@ -1,38 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mi Tienda Web - 10,000</title>
-<style>
-body{background:#000;color:#FFD700;font-family:Arial;text-align:center;margin:0;padding:6px}
-.grid{display:flex;flex-wrap:wrap;justify-content:center}
-.card{width:31.8%;margin:2px;background:#111;border:1px solid #333;border-radius:7px;padding:3px;box-sizing:border-box}
-.precio{background:#fff;color:#000;padding:3px 6px;border-radius:12px;font-size:8px;font-weight:bold;display:inline-block}
-.desc{background:#e60000;color:#fff;padding:2px 5px;border-radius:10px;font-size:7px;font-weight:bold;margin-left:2px;display:inline-block}
-img{width:100%;height:78px;border-radius:5px;border:1px solid gold;object-fit:cover}
-</style>
-</head>
-<body>
-<h1>Mi Tienda Web - 10,000 imágenes visibles 100%</h1>
-<p style="color:#fff">microondas teléfono tablet computadoras refrescos yogurt leche cereal etc - todas chicas</p>
-<div class="grid" id="g"></div>
-<div style="margin:25px"><a href="index.html" style="background:#000;color:gold;border:1px solid gold;padding:10px 20px;border-radius:20px;text-decoration:none"><< regresar a index</a></div>
-
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mi Tienda Web - 2000</title><style>body{background:#000;color:gold;font-family:Arial;text-align:center;margin:0;padding:6px}.grid{display:flex;flex-wrap:wrap;justify-content:center}.card{width:23%;margin:2px;background:#111;border:1px solid #333;border-radius:7px;padding:3px;box-sizing:border-box}.precio{background:#fff;color:#000;padding:3px 5px;border-radius:12px;font-size:8px;font-weight:bold;display:inline-block}.desc{background:red;color:#fff;padding:2px 5px;border-radius:10px;font-size:7px;margin-left:2px;display:inline-block}img{width:100%;height:65px;border-radius:5px;border:1px solid gold}</style></head><body>
+<h1>Mi Tienda Web - 2,000 visibles 100%</h1><div class="grid" id="g"></div><br><a href="index.html" style="color:gold;border:1px solid gold;padding:10px 20px;border-radius:20px;text-decoration:none"><< Volver a Index</a>
 <script>
-let g=document.getElementById('g');
-let productos=["microondas","telefono","tablet","computadora","refresco","yogurt","leche","cereal","pan-bimbo","pastel","tostada","mermelada","fabuloso","pinol","cloralex","queso","foco","herramienta","libreta","lapiz","borrador","libro","cuento","jugo","sabritas","galleta","atun","arroz","frijol","aceite"];
-let bloque="";
-for(let i=1;i<=10000;i++){
- let p=productos[i%productos.length];
- let col=Math.floor(Math.random()*16777215).toString(16).padStart(6,'0');
- // SVG interno = 100% visible, no internet, nunca falla
- let svg=`<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><rect width='200' height='200' fill='#${col}'/><text x='100' y='85' text-anchor='middle' fill='white' font-size='11' font-family='Arial'>${p}</text><text x='100' y='115' text-anchor='middle' fill='white' font-size='18' font-weight='bold' font-family='Arial'>${i}</text></svg>`;
- let b64=btoa(svg);
- let precio=(9.90 + i*0.11).toFixed(2);
- let dcto=Math.floor(Math.random()*55+5);
- bloque+=`<div class="card"><img src="data:image/svg+xml;base64,${b64}"><br><small style="font-size:7px;color:gold">${p}</small><br><span class="precio">s/ ${precio}</span><span class="desc">-${dcto}%</span></div>`;
+let productos=["microondas","telefono","tablet","computadora","refresco","yogurt","leche","cereal","pan-bimbo","queso","fabuloso","pinol","libreta","lapiz","libro"];
+let g=document.getElementById('g'); let h="";
+for(let i=1;i<=2000;i++){
+let nombre=productos[i%productos.length];
+let color=Math.floor(Math.random()*16777215).toString(16).padStart(6,'0');
+let svg=`<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><rect width='200' height='200' fill='#${color}'/><text x='100' y='90' text-anchor='middle' fill='white' font-size='12'>${nombre}</text><text x='100' y='120' text-anchor='middle' fill='white' font-size='18' font-weight='bold'>${i}</text></svg>`;
+let base=btoa(svg);
+let precio=(15+i*0.25).toFixed(2);
+let desc=Math.floor(Math.random()*50+5);
+h+=`<div class="card"><img loading="lazy" src="data:image/svg+xml;base64,${base}"><br><small style="font-size:7px;color:#fff">${nombre}</small><br><span class="precio">s/ ${precio}</span><span class="desc">-${desc}%</span></div>`;
 }
-g.innerHTML=bloque;
+g.innerHTML=h;
 </script>
-</body>
-</html>
+</body></html>
